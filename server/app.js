@@ -9,7 +9,7 @@ const Song = require('./models/Songs.js');
 const database = process.env.DATABASEURL || "mongodb://localhost/pnw-chords";
 
 //connect server to mongoDB 
-mongoose.connect("mongodb+srv://raymer:aakoyun17@cluster0-llkhw.gcp.mongodb.net/chord-hero?",
+mongoose.connect(database,
     {
         useNewUrlParser:true, 
         useUnifiedTopology:true,

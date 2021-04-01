@@ -131,7 +131,8 @@ export default {
 	  			stanzaCount: this.stanzaCount,
 	  		}
 	  		updateSong(SongData, this.$route.params.id)
-	  		this.$router.push('/')
+			  .then(this.$router.push('/'));
+	  		
   		}
 		
 	},
@@ -150,6 +151,7 @@ export default {
 			{ text: 'Pre-chorus', value: 'Pre-chorus' },
 			{ text: 'Chorus', value: 'Chorus' },
 			{ text: 'Bridge', value: 'Bridge' },
+			{ text: 'Instrumental', value: 'Instrumental' },
 			{ text: 'Outro', value: 'Outro' }
 		],
 	}),
