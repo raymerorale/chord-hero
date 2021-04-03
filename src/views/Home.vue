@@ -2,14 +2,27 @@
 	<v-container>
 		<v-row>
 			<v-col class='col-12 col-md-10 container'>
-
-				<v-card class="d-sm-none">
+				
+				<v-toolbar
+					rounded
+					dense
+					class="d-sm-none"
+				>
+					<v-text-field
+						hide-details
+						append-icon="mdi-magnify"
+						placeholder="Search for song title or artist..."
+					></v-text-field>
+				</v-toolbar>
+				
+				
+				<v-card class="d-sm-none mt-4">
 
 					<v-card-title>
 						Explore Songs
 						<v-progress-circular
 							indeterminate
-							color="primary"
+							color="secondary"
 							v-show="!isLoaded"
 							class="ml-4"
 							>
@@ -34,7 +47,7 @@
 					</v-list>
 				</v-card>
 
-				<v-card class="d-sm-block d-none">
+				<v-card class="d-sm-block d-none" light color="secondary">
 				<v-card-title>
 					Explore Songs
 					<v-progress-circular
@@ -46,6 +59,7 @@
 					</v-progress-circular>
 					<v-spacer></v-spacer>
 					<v-text-field
+						color="primary"
 						v-model="search"
 						append-icon="mdi-magnify"
 						label="Search"
@@ -57,7 +71,7 @@
 				<v-data-table
 					:headers="headers"
 					:items="songs"
-					class="text-h6"
+					class="text-h6 secondary"
 					dense
 					:search="search"
 					@click:row='handleClick'

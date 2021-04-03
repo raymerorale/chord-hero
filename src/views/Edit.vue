@@ -2,7 +2,7 @@
 	<v-container class='mt-5 col-lg-7'>
 		<v-sheet class='pa-5' elevation='3'>
 			<span v-if='!onPreview'>
-				<p class='text-h4 text-center'>Add New Song</p>
+				<p class='text-h4 text-center'>Edit Song</p>
 			
 				<v-row>
 					<v-col class='col-7'>
@@ -75,7 +75,7 @@
 				<div class='text-right mt-4'>
 					<v-btn 
 						@click='onPreview = true'
-						dark color="deep-purple accent-4">
+						dark color="primary">
 						Preview
 					</v-btn>
 				</div>
@@ -99,9 +99,10 @@
 					</v-container>
 				</v-sheet>
 				<div class='mt-5 text-right'>
-					<v-btn @click='onPreview = false'>Edit</v-btn>
+					<v-btn @click='onPreview = false'
+					dark color="accent">Edit</v-btn>
 					<v-btn @click='onSubmit'
-					 dark color="deep-purple accent-4"
+					 dark color="primary"
 					 class='ml-3'>Save</v-btn>
 				</div>
 			</div>

@@ -1,14 +1,14 @@
 <template>
   <div>
     <v-app-bar
-      color="deep-purple accent-4"
+      color="primary"
       dark
     >
       <v-app-bar-nav-icon class='d-block d-sm-none' @click='drawer = true'></v-app-bar-nav-icon>
 
       <v-toolbar-title>
-        <a href='/' class='white--text'>
-          Chord Hero
+        <a href='/' class="text-decoration-none white--text">
+          Chord Surfer
         </a>
       </v-toolbar-title>
 
@@ -28,7 +28,7 @@
           background-color='white'
           append-icon="mdi-magnify"
         ></v-text-field> -->
-        <v-btn depressed color="deep-purple accent-4">Login</v-btn>
+        <v-btn depressed color="primary">Login</v-btn>
 
         
       
